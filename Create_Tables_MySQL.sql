@@ -1,6 +1,23 @@
 Use college;
+DROP TABLE student;
 CREATE TABLE student (
-    student_id INT PRIMARY KEY,
-    name VARCHAR(20),
-    major VARCHAR(20)
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(20) NOT NULL,
+    Major VARCHAR(20) DEFAULT 'undecided',
+    Rollno INT UNIQUE
 );
+
+DESCRIBE student;
+ALTER TABLE student add Gpa DECIMAL(3,2);
+ALTER TABLE student ADD State VARCHAR(10);
+DESCRIBE student;
+ALTER TABLE student DROP State;
+DESCRIBE student;
+
+INSERT INTO student VALUES('','KARTHIK','CIVIL',100,8.39);
+INSERT INTO student VALUES('','AKILA','ECE',101,7.75);
+INSERT INTO student VALUES('','SREENIDHI','UKG',102,9.0);
+INSERT INTO student VALUES('','SHRINIVAS','PRE-KG',103,9.5);
+INSERT INTO student(Name,Rollno) VALUES('NATARAJAN',104);
+
+SELECT * FROM student;
