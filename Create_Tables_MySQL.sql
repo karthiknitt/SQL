@@ -7,7 +7,7 @@ CREATE TABLE student (
     Major VARCHAR(20) DEFAULT 'undecided',
     Rollno INT UNIQUE
 );
-/*whaterver */
+/*whaterver  chnges commented*/
 DESCRIBE student;
 ALTER TABLE student add Gpa DECIMAL(3,2);
 ALTER TABLE student ADD State VARCHAR(10);
@@ -42,7 +42,7 @@ WHERE Major='Civil' OR Major='E&CE';
 SELECT * FROM student;
 
 DELETE FROM student
-WHERE Gpa=NULL;
+WHERE Gpa IS NULL;
 
 SELECT * FROM student;
 
